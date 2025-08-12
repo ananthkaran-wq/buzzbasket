@@ -1,10 +1,9 @@
 
-// Minimal client-side helpers
 document.addEventListener('DOMContentLoaded', () => {
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // Render product grid if container exists
+  // Product Grid
   const grid = document.getElementById('product-grid');
   if (grid) {
     fetch('assets/products.json')
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // Render single product page
+  // Product Detail
   const productWrap = document.getElementById('product-detail');
   if (productWrap) {
     const params = new URLSearchParams(location.search);
